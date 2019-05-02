@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>Moya App</title>    
+    <link href="css/bootstrap.min.css" rel="stylesheet">    
+    <link href="css/font-awesome.min.css" rel="stylesheet">    
+    <link href="css/style.css" rel="stylesheet">    
+    <link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon">    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  </head>
+  <body>
+    <div class="nav sticky-top">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-2 toggleIcon"><a href="index.html" class="navbar-brand">                  <img src="img/4.png" id="nameLogo"><img id="nameLogo" src="img/5.png"></a>
+            <div class="navbar-toggler"><a data-target="#sidebar" class="pull-left bars"><i class="material-icons">menu</i></a></div>
+          </div>
+          <div class="col-md-10 col-xs-10 name"> 
+            <div id="myOverlay" class="overlay"><i title="Close Overlay" onclick="closeSearch()" class="material-icons closebtn">close</i>
+              <div class="overlay-content">
+                <form action="/action_page.php">
+                  <input name="search" type="text" placeholder="Search..">
+                </form>
+              </div>
+            </div>
+            <ul class="list-unstyled">
+              <li><i onclick="openSearch()" class="material-icons">search</i></li>
+              <li class="dropdown"><a id="navbarDropdown" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true"><i class="material-icons">notifications</i></a>
+                <div aria-labelledby="navbarDropdown" style="left:-250px;" class="dropdown-menu userDropdown text-center"><a href="user.html" class="dropdown-item ico">
+                     new customers registered
+                    <p>23-11-201820:24</p>
+                    <hr></a><a href="user.html" class="dropdown-item ico">
+                     new customers registered
+                    <p>23-11-201820:24</p>
+                    <hr></a><a href="user.html" class="dropdown-item ico">
+                     new customers registered
+                    <p>23-11-201820:24</p>
+                    <hr></a><a href="user.html" class="dropdown-item ico">
+                     new customers registered
+                    <p>23-11-201820:24</p>
+                    <hr></a></div>
+              </li>
+              <li><i onclick="test()" class="material-icons">brightness_3</i></li>
+              <li class="dropdown"><a id="navbarDropdown" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true"><img src="img/2.jpg"></a>
+                <div aria-labelledby="navbarDropdown" style="left:-150px;" class="dropdown-menu "><a href="#" class="dropdown-item"> <img src="img/2.jpg">
+                    <div class="details">
+                      <h6>Steave Jobs</h6>
+                      <p>varun@gmail.com</p>
+                      <button class="btn btn-danger">view profile</button>
+                    </div></a>
+                  <div class="dropdown-divider"></div><a href="profile.html" class="dropdown-item ico"> <i class="material-icons">account_circle</i>My profile</a><a href="#" class="dropdown-item ico"> <i class="material-icons">power_settings_new</i>log out</a>
+                </div>
+              </li>
+              <li class="dropdown"><a id="navbarDropdown" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true"><i class="material-icons">language</i></a>
+                <div aria-labelledby="navbarDropdown" style="left:-250px;width:100px;" class="dropdown-menu userDropdown text-center"><a href="user.html" class="dropdown-item ico"> EN</a><a href="user.html" class="dropdown-item ico">AR    </a></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="all">
+      <div class="container-fluid">
+        <div class="row d-flex d-md-block flex-nowrap wrapper">
+          <div id="sidebar" class="col-md-2 float-left collapse width show">
+            <div class="list-group border-0 card-body"><a data-parent="#sidebar" href="index.html" class=" list-group-item d-inline-block collapsed  activated"><i class="material-icons">dashboard</i><span class="d-md-inline">Dashboard</span></a><a data-parent="#sidebar" href="profile.html" class=" list-group-item d-inline-block collapsed"><i class="material-icons">account_circle</i><span class="d-md-inline"> profile</span></a><a data-parent="#sidebar" href="management.html" class=" list-group-item d-inline-block collapsed"><i class="material-icons">assignment</i><span class="d-md-inline"> management</span></a><a data-parent="#sidebar" href="product.html" class="list-group-item d-inline-block collapsed "><i class="material-icons">shopping_basket</i><span class="d-md-inline">Product</span></a><a data-parent="#sidebar" href="category.html" class="list-group-item d-inline-block collapsed "><i class="material-icons">horizontal_split</i><span class="d-md-inline">Product category            </span></a><a data-parent="#sidebar" href="order.html" class="list-group-item d-inline-block collapsed "><i class="material-icons">shopping_cart</i><span class="d-md-inline">Order</span></a><a data-parent="#sidebar" href="supervisors.html" class="list-group-item d-inline-block collapsed "><i class="material-icons">supervised_user_circle</i><span class="d-md-inline">Supervisor</span></a><a data-parent="#sidebar" href="factory.html" class="list-group-item d-inline-block collapsed "><i class="material-icons">business</i><span class="d-md-inline">Factory</span></a><a data-parent="#sidebar" href="driver.html" class="list-group-item d-inline-block collapsed"><i class="material-icons">directions_car</i><span class="d-md-inline">Drivers</span></a><a data-parent="#sidebar" href="customer.html" class="list-group-item d-inline-block collapsed"><i class="material-icons">supervisor_account</i><span class="d-md-inline">Customers</span></a><a data-parent="#sidebar" href="notification.html" class="list-group-item d-inline-block collapsed"><i class="material-icons">notifications</i><span class="d-md-inline">Notifications</span></a><a data-parent="#sidebar" href="geofencing.html" class="list-group-item d-inline-block collapsed"><i class="material-icons">places</i><span class="d-md-inline">Geofencing</span></a><a data-parent="#sidebar" href="adv.html" class="list-group-item d-inline-block collapsed"><i class="material-icons">font_download</i><span class="d-md-inline">Advertisment</span></a><a data-parent="#sidebar" href="earnings.html" class="list-group-item d-inline-block collapsed"><i class="material-icons">attach_money</i><span class="d-md-inline">Earnings</span></a><a data-parent="#sidebar" href="invoicing.html" class="list-group-item d-inline-block collapsed"><i class="material-icons">print</i><span class="d-md-inline">Invoicing</span></a><a data-parent="#sidebar" href="reports.html" class="list-group-item d-inline-block collapsed"><i class="material-icons">receipt</i><span class="d-md-inline">Reports</span></a><a data-parent="#sidebar" href="promotion.html" class="list-group-item d-inline-block collapsed"><i class="material-icons">card_giftcard</i><span class="d-md-inline">Promotions</span></a><a data-parent="#sidebar" href="business.html" class="list-group-item d-inline-block collapsed"><i class="material-icons">book</i><span class="d-md-inline">Businuss type</span></a><a data-parent="#sidebar" href="about.html" class="list-group-item d-inline-block collapsed"><i class="material-icons">alternate_email</i><span class="d-md-inline">About us</span></a><a data-parent="#sidebar" href="contact.html" class="list-group-item d-inline-block collapsed"><i class="material-icons">help</i><span class="d-md-inline">Contact us</span></a><a data-parent="#sidebar" href="faq.html" class="list-group-item d-inline-block collapsed"><i class="material-icons">compare_arrows</i><span class="d-md-inline">Faq</span></a><a data-parent="#sidebar" href="terms.html" class="list-group-item d-inline-block collapsed"><i class="material-icons">wb_sunny</i><span class="d-md-inline">Terms & Condition</span></a><a data-parent="#sidebar" href="rating.html" class="list-group-item d-inline-block collapsed"><i class="material-icons">star_rate</i><span class="d-md-inline">Ratings</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="col-md-12">
+      <div class="management openMenu">
+        <div class="allTitle">
+          <h1>Admin Management   </h1><br>
+          <nav aria-label="breadcrumb" role="navigation">
+            <ol class="breadcrumb">
+              <li tabindex="0" class="breadcrumb-item"><a href="index.html">dashboard</a></li>
+              <li class="breadcrumb-item"><a href="#" class="active">Admin Management</a></li>
+            </ol>
+          </nav>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="total">
+              <h3>total admin :<span>31</span></h3>
+              <div class="buttonCheck">
+                <h6>exciting</h6>
+                <label class="switch">     
+                  <input type="checkbox"><span class="slider round">  </span>
+                </label>
+                <h6>blocked</h6>
+                <label class="switch">
+                  <input type="checkbox" checked><span class="slider round"> </span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="total allInput pull-right">
+              <input type="text" placeholder="Username" aria-label="Username" aria-describedby="sizing-addon1" class="form-control"><i class="fa fa-search"></i>
+              <button type="button" data-toggle="modal" data-target="#exampleModal1" class="btn popup">Creat sub admin</button>
+              <div id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal">
+                <div role="document" class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 id="exampleModalLabel" class="modal-title"> </h5>Add Sub Admin
+                      <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group row"> 
+                          <label for="" class="col-sm-3 col-form-label">name</label>
+                          <div class="col-sm-9">
+                            <input type="text" id="name" class="form-control">
+                          </div>
+                        </div>
+                        <div class="form-group row">                                       
+                          <label for="" class="col-sm-3 col-form-label"> email</label>
+                          <div class="col-sm-9">
+                            <input type="text" id="email" class="form-control">
+                          </div>
+                        </div>
+                        <div class="form-group row">                                       
+                          <label for="" class="col-sm-3 col-form-label"> Country Code</label>
+                          <div class="col-sm-9">
+                            <input type="number" id="Code" class="form-control">
+                          </div>
+                        </div>
+                        <div class="form-group row">                                       
+                          <label for="" class="col-sm-3 col-form-label">   password</label>
+                          <div class="col-sm-9">
+                            <input type="password" id="cr" class="form-control">
+                          </div>
+                        </div>
+                        <div class="form-group row">                                       
+                          <label for="" class="col-sm-3 col-form-label"> Upload CR</label>
+                          <div class="col-sm-9">
+                            <input type="file" id="name" class="form-control">
+                          </div>
+                        </div>
+                        <div class="form-group row">                                       
+                          <label for="" class="col-sm-3 col-form-label">  Create Super Admin</label>
+                          <div class="col-sm-9">
+                            <select id="exampleFormControlSelect" class="form-control">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row">                                       
+                          <label for="" class="col-sm-3 col-form-label"> Permission Matrix</label>
+                          <div class="col-sm-9">
+                            <select id="exampleFormControlSelect" class="form-control">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <button class="btn">add new    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="allDiv"> 
+          <div class="col-md-12 col-xs-12">
+            <div class="all">
+              <table> 
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">name</th>
+                    <th scope="col">Profile Pic	</th>
+                    <th scope="col">Mobile Number</th>
+                    <th scope="col">Permissions</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">action   	</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>mark</td>
+                    <td><img src="img/1.png"></td>
+                    <td>	966-5656565656</td>
+                    <td> 
+                      <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-rounded btn-sm popup">view Permissions</button>
+                      <div id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal">
+                        <div role="document" class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 id="exampleModalLabel" class="modal-title"> </h5>Customer Status
+                              <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                            <div class="modal-body">
+                              <table class="table-striped">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">View Permissions</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>Dashboard</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>Admin Profile</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>factory</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>lina@moyaapp.com</td>
+                    <td>
+                      <button type="button" data-toggle="modal" data-target="#exampleModal6" class="btn"><i class="material-icons">create</i></button>
+                      <div id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal">
+                        <div role="document" class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 id="exampleModalLabel" class="modal-title"> </h5>Edit Sub Admin
+                              <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="form-group row"> 
+                                  <label for="" class="col-sm-3 col-form-label">name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" id="name" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label"> email</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" id="email" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label"> Country Code</label>
+                                  <div class="col-sm-9">
+                                    <input type="number" id="Code" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label">   password</label>
+                                  <div class="col-sm-9">
+                                    <input type="password" id="cr" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label"> Upload CR</label>
+                                  <div class="col-sm-9">
+                                    <input type="file" id="name" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label">  Create Super Admin</label>
+                                  <div class="col-sm-9">
+                                    <select id="exampleFormControlSelect" class="form-control">
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label"> Permission Matrix</label>
+                                  <div class="col-sm-9">
+                                    <select id="exampleFormControlSelect" class="form-control">
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <button class="btn">add new</button>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="btn"><i class="material-icons">lock</i></button>
+                      <button class="btn"><i class="material-icons">info</i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>mark</td>
+                    <td><img src="img/1.png"></td>
+                    <td>	966-5656565656</td>
+                    <td> 
+                      <button type="button" data-toggle="modal" data-target="#exampleModal2" class="btn btn-rounded btn-sm popup">view Permissions	</button>
+                      <div id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal">
+                        <div role="document" class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 id="exampleModalLabel" class="modal-title"> </h5>Customer Status
+                              <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                            <div class="modal-body">
+                              <table class="table-striped">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">View Permissions</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>Dashboard</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>Admin Profile</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>factory</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>lina@moyaapp.com</td>
+                    <td> 
+                      <button type="button" data-toggle="modal" data-target="#exampleModal7" class="btn"><i class="material-icons">create</i></button>
+                      <div id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal">
+                        <div role="document" class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 id="exampleModalLabel" class="modal-title"> </h5>Edit Sub Admin
+                              <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="form-group row"> 
+                                  <label for="" class="col-sm-3 col-form-label">name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" id="name" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label"> email</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" id="email" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label"> Country Code</label>
+                                  <div class="col-sm-9">
+                                    <input type="number" id="Code" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label">   password</label>
+                                  <div class="col-sm-9">
+                                    <input type="password" id="cr" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label"> Upload CR</label>
+                                  <div class="col-sm-9">
+                                    <input type="file" id="name" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label">  Create Super Admin</label>
+                                  <div class="col-sm-9">
+                                    <select id="exampleFormControlSelect" class="form-control">
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label"> Permission Matrix</label>
+                                  <div class="col-sm-9">
+                                    <select id="exampleFormControlSelect" class="form-control">
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <button class="btn">add new</button>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="btn"><i class="material-icons">lock</i></button>
+                      <button class="btn"><i class="material-icons">info</i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>mark</td>
+                    <td><img src="img/1.png"></td>
+                    <td>	966-5656565656</td>
+                    <td> 
+                      <button type="button" data-toggle="modal" data-target="#exampleModal3" class="btn btn-rounded btn-sm popup">view Permissions	</button>
+                      <div id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal">
+                        <div role="document" class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 id="exampleModalLabel" class="modal-title"> </h5>Customer Status
+                              <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                            <div class="modal-body">
+                              <table class="table-striped">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">View Permissions</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>Dashboard</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>Admin Profile</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>factory</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>lina@moyaapp.com</td>
+                    <td> 
+                      <button type="button" data-toggle="modal" data-target="#exampleModal8" class="btn"><i class="material-icons">create</i></button>
+                      <div id="exampleModal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal">
+                        <div role="document" class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 id="exampleModalLabel" class="modal-title"> </h5>Edit Sub Admin
+                              <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="form-group row"> 
+                                  <label for="" class="col-sm-3 col-form-label">name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" id="name" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label"> email</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" id="email" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label"> Country Code</label>
+                                  <div class="col-sm-9">
+                                    <input type="number" id="Code" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label">   password</label>
+                                  <div class="col-sm-9">
+                                    <input type="password" id="cr" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label"> Upload CR</label>
+                                  <div class="col-sm-9">
+                                    <input type="file" id="name" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label">  Create Super Admin</label>
+                                  <div class="col-sm-9">
+                                    <select id="exampleFormControlSelect" class="form-control">
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label"> Permission Matrix</label>
+                                  <div class="col-sm-9">
+                                    <select id="exampleFormControlSelect" class="form-control">
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <button class="btn">add new</button>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="btn"><i class="material-icons">lock</i></button>
+                      <button class="btn"><i class="material-icons">info</i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>mark</td>
+                    <td><img src="img/1.png"></td>
+                    <td>	966-5656565656</td>
+                    <td> 
+                      <button type="button" data-toggle="modal" data-target="#exampleModal4" class="btn btn-rounded btn-sm popup">view Permissions	</button>
+                      <div id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal">
+                        <div role="document" class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 id="exampleModalLabel" class="modal-title"> </h5>Customer Status
+                              <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                            <div class="modal-body">
+                              <table class="table-striped">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">View Permissions</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>Dashboard</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>Admin Profile</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>factory</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>lina@moyaapp.com</td>
+                    <td> 
+                      <button type="button" data-toggle="modal" data-target="#exampleModal9" class="btn"><i class="material-icons">create</i></button>
+                      <div id="exampleModal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal">
+                        <div role="document" class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 id="exampleModalLabel" class="modal-title"> </h5>Edit Sub Admin
+                              <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="form-group row"> 
+                                  <label for="" class="col-sm-3 col-form-label">name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" id="name" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label"> email</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" id="email" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label"> Country Code</label>
+                                  <div class="col-sm-9">
+                                    <input type="number" id="Code" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label">   password</label>
+                                  <div class="col-sm-9">
+                                    <input type="password" id="cr" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label"> Upload CR</label>
+                                  <div class="col-sm-9">
+                                    <input type="file" id="name" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label">  Create Super Admin</label>
+                                  <div class="col-sm-9">
+                                    <select id="exampleFormControlSelect" class="form-control">
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label"> Permission Matrix</label>
+                                  <div class="col-sm-9">
+                                    <select id="exampleFormControlSelect" class="form-control">
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <button class="btn">add new</button>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="btn"><i class="material-icons">lock</i></button>
+                      <button class="btn"><i class="material-icons">info</i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>mark</td>
+                    <td><img src="img/1.png"></td>
+                    <td>	966-5656565656</td>
+                    <td> 
+                      <button type="button" data-toggle="modal" data-target="#exampleModal5" class="btn btn-rounded btn-sm popup">view Permissions	</button>
+                      <div id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal">
+                        <div role="document" class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 id="exampleModalLabel" class="modal-title"> </h5>Customer Status
+                              <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                            <div class="modal-body">
+                              <table class="table-striped">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">View Permissions</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>Dashboard</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>Admin Profile</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>factory</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>lina@moyaapp.com</td>
+                    <td> 
+                      <button type="button" data-toggle="modal" data-target="#exampleModal10" class="btn"><i class="material-icons">create</i></button>
+                      <div id="exampleModal10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal">
+                        <div role="document" class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 id="exampleModalLabel" class="modal-title"> </h5>Edit Sub Admin
+                              <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="form-group row"> 
+                                  <label for="" class="col-sm-3 col-form-label">name</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" id="name" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label"> email</label>
+                                  <div class="col-sm-9">
+                                    <input type="text" id="email" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label"> Country Code</label>
+                                  <div class="col-sm-9">
+                                    <input type="number" id="Code" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label">   password</label>
+                                  <div class="col-sm-9">
+                                    <input type="password" id="cr" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label"> Upload CR</label>
+                                  <div class="col-sm-9">
+                                    <input type="file" id="name" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label">  Create Super Admin</label>
+                                  <div class="col-sm-9">
+                                    <select id="exampleFormControlSelect" class="form-control">
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="form-group row">                                       
+                                  <label for="" class="col-sm-3 col-form-label"> Permission Matrix</label>
+                                  <div class="col-sm-9">
+                                    <select id="exampleFormControlSelect" class="form-control">
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <button class="btn">add new</button>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="btn"><i class="material-icons">lock</i></button>
+                      <button class="btn"><i class="material-icons">info</i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="footer openMenu">
+        <h2>&copy; 2018 MoyaApp</h2>
+      </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>    
+    <script src="js/popper.min.js"></script>    
+    <script src="js/bootstrap.min.js"></script>    
+    <script src="js/plugin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+body{
+    background: #3d4554;
+  
+}.nav,
+.nav .overlay input[type=text],
+.nav .overlay input[type=text]:hover,
+.openMenu .all-item,
+.all #sidebar,
+.all #sidebar .list-group-item ,
+.footer,
+.allDiv,
+.form-control,
+.openMenu form input[type=file]:before,
+.modal-content,
+.openMenu .total .modal .modal-body input[type=file]:before,
+ .dropdown-menu,
+ .nav ul li .dropdown-menu a,
+ .user .all
+  {
+    background: #272c33;
+}
+.nav ul li .dropdown-menu .ico,
+.adv .totalImg .up:hover .material-icons {
+    color: #fff;
+}
